@@ -1,0 +1,64 @@
+\section{Related Work}
+\label{section:relatedwork}
+
+We review the related work on Venn diagram, Euler diagram,
+region-based set data visualization and line-based set data visualization 
+to show the background of our work.
+%Sets are ubiquitously used in data analysis.
+%It is widely acknowledged that there usually exist several
+%intersection relations in a family of sets.
+%For the set data that describes multiple literatures,
+%it is vital to visualize such relations clearly in survey writing.
+
+\subsection{Venn or Euler Diagrams}
+
+Venn or Euler diagrams are the most classic ways to illustrate set interactions.
+Flower et al.~\cite{flower2008euler} describe the characteristics shared by the abstract
+Euler diagrams that can be visualized.
+%An abstract Euler diagram, according to their work,
+%is a formal abstract description of the information at
+%is to be displayed as a concrete Euler diagram.
+Both missing pieces~\cite{koshman2013metasearch,stapleton2010inductively} and fan diagrams~\cite{kim2007visualizing}
+use similar concentric rings layout to visualize three sets.
+%The former one uses 3 layers of the rings for pairwise overlaps,
+%while the latter one places the overlaps in the outer ring only.
+Besides, some approaches try to add glyphs to represent set members intuitively,
+such as the work presented by Simonetto et al.~\cite{simonetto2009fully}.
+To handle cases where well-matched Euler diagrams~\cite{alsallakh2016state} cannot be drawn,
+Simonetto and Auber~\cite{simonetto2008visualise} propose a method,
+splitting or duplicating certain sets and subsets into disjoint parts,
+connecting these parts using edges.
+Nevertheless, large Euler diagrams could be incredibly hard to comprehend.
+In this case, different visual metaphors are used to solve this problem.
+
+
+\subsection{Region-Based and Line-Based Methods}
+
+Region-based methods use a closed curve surrounding the set items to define a region.
+In this scenario, colors are encoded to distinguish those sets.
+The area of interest can be added to the rendering of classical UML-like diagrams
+based on the texture splatting principle~\cite{byelas2006visualization}.
+Collins et al.~\cite{collins2009bubble} provide a continuous iso-contour,
+i.e. BubbleSets, to depict set membership while keeping the primary layout.
+One potential solution is to use field function.
+It guarantees that regions of two sets that share no common elements will not cause overlaps~\cite{vihrovs2014inverse}.
+%Whereas those colored regions might cause the cognition of the underlying visualization.
+
+When two data items are connected,
+the connection could be in many forms~\cite{palmer1994rethinking}, including surfaces mentioned above,
+curves, ribbons and so on~\cite{steinberger2011context}.
+It has been discussed that elements connected by smooth (curved) lines are
+easier to be discriminated~\cite{hoffmann2008evaluating} due to the outstanding
+connection and the smooth routing around significant content.
+Alper et al. present line sets~\cite{alper2011design},
+using a curve to connect all elements of a certain set.
+It firstly generates a line to represent each set by
+connecting all its members~\cite{lin1973effective}.
+Then the lines are drawn as Bezier splines using multiple colors correlated to the sets.
+Overlaps are illustrated as concentric rings around the set elements.
+Kelp diagrams~\cite{dinkla2012kelp} can solve this problem to some extent.
+A nested and a striped style are presented.
+Furthermore Kelp Fusion~\cite{meulemans2013kelpfusion} is designed
+to generate shortest-path graphs.
+However, many of kinds of region-based and line-based tools lack of assistance of embedding the
+representative images for each element.

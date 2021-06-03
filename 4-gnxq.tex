@@ -1,0 +1,204 @@
+\section{功能需求}
+\subsection{系统划分}
+自然之路——营地自然教育管理系统主要分为两大子系统：前台显示、后台管理，如图~\ref{fig:系统划分}。
+
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=\linewidth]{images/系统划分.png}
+ \caption{
+    系统划分
+ }
+ \label{fig:系统划分}
+ \vspace{-\medskipamount}
+\end{figure}
+
+\subsection{说明与优先级}
+系统特性及系统提供的主要服务主要有六个方面：发布参与自然教育心得、查询自然教育课程信息、积分兑换、在线预订自然教育课程、用户信息管理、发布自然教育课程信息。
+
+这六项特性中，在线预订自然教育课程，发布自然教育课程信息和用户信息管理服务是本系统的特色模块，在系统设计和实现的过程中优先级均为高。查询自然教育课程信息服务，发布参与自然教育心得服务均为基本服务模块，优先级为中。积分兑换服务重点在于有一定用户量积累的激励制度，没有过多新颖的设计部分，优先级为低。
+
+\subsection{数据流图}
+顶层数据流图如图~\ref{fig:DFD0}。
+
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=\linewidth]{images/DFD-0.png}
+ \caption{
+    顶层数据流图
+  }
+ \label{fig:DFD0}
+ \vspace{-\medskipamount}
+\end{figure}
+
+第一层数据流图如图~\ref{fig:DFD1}。
+
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=\linewidth]{images/DFD-1.png}
+ \caption{
+    第一层数据流图
+  }
+ \label{fig:DFD1}
+ \vspace{-\medskipamount}
+\end{figure}
+
+\subsection{总用例图}
+用例图如图~\ref{fig:uc1}、图~\ref{fig:uc2}、图~\ref{fig:uc3}。
+
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=0.8\linewidth]{images/usecase-all.png}
+ \caption{
+    系统总用例图
+  }
+ \label{fig:uc1}
+ \vspace{-\medskipamount}
+\end{figure}
+
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=0.8\linewidth]{images/usecase-user.png}
+ \caption{
+    用例图
+  }
+ \label{fig:uc2}
+ \vspace{-\medskipamount}
+\end{figure}
+
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=0.8\linewidth]{images/usecase-manager.png}
+ \caption{
+    用例图
+  }
+ \label{fig:uc3}
+ \vspace{-\medskipamount}
+\end{figure}
+
+\subsection{系统特性}
+\subsubsection{发布自然教育课程信息}
+
+系统管理员根据那丘儿国际森林营地的园区建设，发布对应的自然教育课程信息，用户可浏览并选购。
+
+\textbf{用例图：}
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=0.8\linewidth]{images/usecase-4.png}
+ \caption{
+    用例图-发布自然教育课程信息
+  }
+ \label{fig:uc4}
+ \vspace{-\medskipamount}
+\end{figure}
+
+%\textbf{用例描述：}
+%
+%\begin{center}
+%\begin{tabular}{|l|l|}
+%\hline 用例名称 &  发布课程信息 \\
+%\hline 参与者 & 管理员 \\
+%\hline 基本序列 & \\
+%\hline 分支序列 & \\
+%\hline 异常序列 & \\
+%\hline 备注 & \\
+%\hline
+%\end{tabular}
+%\end{center}
+
+\subsubsection{查询自然教育课程信息}
+
+查询那丘儿国际森林营地内各大热门课程的简要介绍，包括概貌、价格等信息；规划自然教育计划，在浏览各个城市的景点的同时，还可以了解所浏览城市的当日天气及明天天气。
+
+\textbf{用例图：}
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=0.8\linewidth]{images/usecase-5.png}
+ \caption{
+    用例图-查询自然教育课程信息
+    }
+ \vspace{-\medskipamount}
+\end{figure}
+
+查询自然教育课程信息的第二层数据流图如图~\ref{fig:DFD-2-2}。
+
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=0.8\linewidth]{images/DFD-2-2.png}
+ \caption{
+    查询自然教育课程信息的第二层数据流图
+  }
+ \label{fig:DFD-2-2}
+ \vspace{-\medskipamount}
+\end{figure}
+
+
+\subsubsection{在线预订自然教育课程}
+
+用户首先查询、浏览那丘儿国际森林营地内的自然教育课程信息，而后根据自身需求，
+如果有感兴趣的、各方面契合自己需求的自然教育课程，
+可以通过提交订单的方式在线预订课程。
+
+\textbf{用例图：}
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=0.8\linewidth]{images/usecase-6.png}
+ \caption{
+    用例图-在线预订自然教育课程
+  }
+ \vspace{-\medskipamount}
+\end{figure}
+
+\subsubsection{用户信息管理}
+
+系统管理员收到用户在线预订发来的订单，处理订单信息；管理用户账户；维护用户数据。
+
+\textbf{用例图：}
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=0.8\linewidth]{images/usecase-7.png}
+ \caption{
+    用例图-用户信息管理
+  }
+ \vspace{-\medskipamount}
+\end{figure}
+
+\subsubsection{发布参与自然教育心得}
+
+提供一个照片及心情的展示平台，是一个范围更广泛的“朋友圏”，喜欢分享自己参与营地自然教育的经历或感受的朋友都可以在小程序中上传自己分享的内容，
+其他人可以进行评论与点赞，这也为那些想体验营地自然教育却又不知道自己喜欢去哪里的人提供了很好的推荐。
+
+\textbf{用例图：}
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=0.8\linewidth]{images/usecase-8.png}
+ \caption{
+    用例图-发布参与自然教育心得
+  }
+ \vspace{-\medskipamount}
+\end{figure}
+
+\subsubsection{积分兑换}
+
+本质是线上商店，有各种那丘儿国际森林营地的文创、书籍、纪念品等，参与者可以通过在线预订课程、发布心得获得积分，用以换购各种奖品。
+
+\textbf{用例图：}
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=0.8\linewidth]{images/usecase-9.png}
+ \caption{
+    用例图-积分兑换
+  }
+ \vspace{-\medskipamount}
+\end{figure}
+
+积分兑换的第二层数据流图如图~\ref{fig:DFD-2-1}。
+
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=0.8\linewidth]{images/DFD-2-1.png}
+ \caption{
+    查询自然教育课程信息的第二层数据流图
+  }
+ \label{fig:DFD-2-1}
+ \vspace{-\medskipamount}
+\end{figure}
